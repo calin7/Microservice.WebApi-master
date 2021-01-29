@@ -8,7 +8,7 @@ namespace Customer.Microservice.Data
 {
     public interface IApplicationDbContext
     {
-        DbSet<Entities.Customer> Customers{ get; set; }
+        DbSet<Entities.Meme> Memes{ get; set; }
         Task<int> SaveChanges();
     }
 }

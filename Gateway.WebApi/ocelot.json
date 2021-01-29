@@ -11,7 +11,11 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/product",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/product/{id}",
@@ -30,7 +34,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/customer",
+      "DownstreamPathTemplate": "/api/meme",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -38,7 +42,7 @@
           "Port": 44373
         }
       ],
-      "UpstreamPathTemplate": "/gateway/customer",
+      "UpstreamPathTemplate": "/gateway/meme",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
@@ -46,7 +50,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/api/customer/{id}",
+      "DownstreamPathTemplate": "/api/meme/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -54,8 +58,40 @@
           "Port": 44373
         }
       ],
-      "UpstreamPathTemplate": "/gateway/customer/{id}",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      "UpstreamPathTemplate": "/gateway/meme/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/name/authenticate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 59980
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/authenticate",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/meme",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "apimeme.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/generate",
+      "UpstreamHttpMethod": [ "GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ]
 

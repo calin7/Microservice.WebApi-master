@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Customer.Microservice.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200718104844_Initial")]
-    partial class Initial
+    [Migration("20210128222022_fixed meme bug")]
+    partial class fixedmemebug
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,23 +20,17 @@ namespace Customer.Microservice.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Meme.Microservice.Entities.Meme", b =>
+            modelBuilder.Entity("Customer.Microservice.Entities.Meme", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City")
+                    b.Property<string>("BottomText")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Contact")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("TopText")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

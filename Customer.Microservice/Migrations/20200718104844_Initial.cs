@@ -7,7 +7,7 @@ namespace Customer.Microservice.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Customers",
+                name: "Memes",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -26,7 +26,7 @@ namespace Customer.Microservice.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Customers");
+                name: "Memes");
         }
     }
 }

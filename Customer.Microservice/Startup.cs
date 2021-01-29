@@ -39,11 +39,11 @@ namespace Customer.Microservice
             #region Swagger
             services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(string.Format(@"{0}\Customer.Microservice.xml", System.AppDomain.CurrentDomain.BaseDirectory));
+                c.IncludeXmlComments(string.Format(@"{0}\Meme.Microservice.xml", System.AppDomain.CurrentDomain.BaseDirectory));
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Customer Microservice API",
+                    Title = "Meme Microservice API",
                 });
             });
             #endregion
@@ -67,7 +67,7 @@ namespace Customer.Microservice
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Customer.Microservice");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Meme.Microservice");
             });
             app.UseEndpoints(endpoints =>
             {
