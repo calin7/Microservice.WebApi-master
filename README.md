@@ -20,3 +20,5 @@ Functionalities
 * Add Meme
 * See all the memes
 * Generate Meme
+![Screenshot](Diagram.png)
+
