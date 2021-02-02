@@ -38,8 +38,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44373
+          "Host": "meme.microservice",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/gateway/meme",
@@ -54,8 +54,8 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44373
+          "Host": "meme.microservice",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/gateway/meme/{id}",
@@ -67,11 +67,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/name/authenticate",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 59980
+          "Host": "auth.demo",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/gateway/authenticate",
