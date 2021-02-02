@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  auth.demo:
+    image: ${DOCKER_REGISTRY-}authdemo
+    build:
+      context: .
+      dockerfile: Auth.Demo\Dockerfile
+    ports:
+      - "9002:443"
+
+  meme.microservice:
+    image: ${DOCKER_REGISTRY-}mememicroservice
+    build:
+      context: .
+      dockerfile: Customer.Microservice\Dockerfile
+    ports:
+      - "9003:443"
+
+  gateway.webapi:
+    image: ${DOCKER_REGISTRY-}gatewaywebapi
+    build:
+      context: .
+      dockerfile: Gateway.WebApi\Dockerfile
+    ports:
+      - "9001:443"
+    depends_on:
+        - auth.demo
+        - meme.microservice
+      
+
+  
+
+
+  
+
