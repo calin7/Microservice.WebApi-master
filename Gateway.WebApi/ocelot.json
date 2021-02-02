@@ -38,7 +38,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 44373
         }
       ],
@@ -54,7 +54,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 44373
         }
       ],
@@ -70,7 +70,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "locahost",
+          "Host": "localhost",
           "Port": 59980
         }
       ],
@@ -79,7 +79,7 @@
     },
     {
       "DownstreamPathTemplate": "/meme",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "apimeme.com",
@@ -87,7 +87,7 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/generate",
-      "UpstreamHttpMethod": [ "GET"],
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
